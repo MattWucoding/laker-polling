@@ -5,7 +5,7 @@ class Course {
     String name
     String crn
 
-    static hasMany = [user: User]
+    static hasMany = [users: User]
 
     static mapping = {
         id column: 'crn'
@@ -14,5 +14,6 @@ class Course {
     static constraints = {
         name nullable: true
         crn nullable: false
+        users nullable: true
     }
 }
