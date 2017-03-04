@@ -7,7 +7,7 @@ class Semester {
     String year
     Season season
 
-    static hasMany = [course: Course]
+    static hasMany = [courses: Course]
 
     static mapping = {
         version false
@@ -16,6 +16,6 @@ class Semester {
     static constraints = {
         year nullable: false
         season nullable: false
+        courses nullable: true
     }
 }
-
