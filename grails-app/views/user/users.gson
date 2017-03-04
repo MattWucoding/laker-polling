@@ -1,0 +1,9 @@
+import edu.oswego.cs.lakerpolling.domains.User
+
+model {
+    List<User> users
+}
+
+json {
+
+}

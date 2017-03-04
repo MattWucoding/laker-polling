@@ -10,9 +10,10 @@ class User {
     String email
     String imageUrl
 
-    static hasOne = [authToken: AuthToken]
+    static hasOne = [authToken: AuthToken, role: Role]
 
     static mapping = {
+        table "users"
         version false
     }
 
@@ -22,5 +23,6 @@ class User {
         email unique: true
         authToken nullable: true
         imageUrl nullable: true, blank: false
+        role nullable: true
     }
 }

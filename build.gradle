@@ -39,7 +39,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
     compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-tomcat"
+
     compile "org.grails:grails-plugin-url-mappings"
     compile "org.grails:grails-plugin-rest"
     compile "org.grails:grails-plugin-codecs"
@@ -58,6 +58,10 @@ dependencies {
     compile "org.grails.plugins:views-json-templates"
     compile "org.grails:grails-plugin-gsp"
     compile 'com.google.api-client:google-api-client:1.22.0'
+    compile "org.apache.commons:commons-csv:1.4"
+
+    provided "org.springframework.boot:spring-boot-starter-tomcat"
+
 
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api"
@@ -65,6 +69,7 @@ dependencies {
 
     runtime "com.h2database:h2"
     runtime 'mysql:mysql-connector-java:5.1.36'
+    runtime 'org.postgresql:postgresql:42.0.0.jre7'
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.11.6"
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"

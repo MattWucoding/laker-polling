@@ -1,9 +1,8 @@
 package edu.oswego.cs.lakerpolling.domains
 
+import edu.oswego.cs.lakerpolling.util.Season
 
-/**
- * Created by Josh on 3/2/17.
- */
+
 class Semester {
     String year
     Season season

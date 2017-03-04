@@ -1,8 +1,0 @@
-model {
-    String message
-}
-
-json {
-    "status" "failure"
-    "messages" message
-}

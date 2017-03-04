@@ -1,0 +1,25 @@
+response.status errorCode
+
+model {
+    int errorCode
+    String message
+}
+
+json {
+    "status" "failure"
+    "error" errorCode
+
+    def m
+
+    if (message != null) {
+        m = message
+    } else {
+        try {
+            m = valueOf(errorCode).reasonPhrase
+        }catch (IllegalArgumentException e) {
+            m = "None"
+        }
+    }
+
+    "message" m
+}
