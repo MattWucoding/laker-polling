@@ -20,8 +20,7 @@ class BootStrap {
         new Semester(year: 2017, season: Season.SPRING).save()
 
         //Example Course
-        new Course(name: csc480, crn: 12345, users: User.findAllByRole(null)).save()
-
+        new Course(name: csc480, crn: 12345, users: User.findAllByRole(null), semester: Semester.findBySeasonAndYear(Season.SPRING,2017)).save()
 
 
     }
