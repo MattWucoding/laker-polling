@@ -6,6 +6,7 @@ class Course {
     String crn
 
     static hasMany = [users: User]
+    static belongsTo = [semester: Semester]
 
     static mapping = {
         id column: 'crn'
