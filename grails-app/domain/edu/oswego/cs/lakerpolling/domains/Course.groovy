@@ -1,12 +1,11 @@
 package edu.oswego.cs.lakerpolling.domains
 
 
-class Course {
-    String name
+String name
     String crn
 
     static hasMany = [users: User]
-    static belongsTo = [semester: Semester]
+    static belongsTo = [instructor: User]
 
     static mapping = {
         id column: 'crn'
