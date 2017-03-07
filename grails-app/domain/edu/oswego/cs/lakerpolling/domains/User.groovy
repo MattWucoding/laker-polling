@@ -14,7 +14,6 @@ class User {
     static hasMany = [course: Course]
 
     static mapping = {
-        table "users"
         version false
     }
 
