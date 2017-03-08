@@ -11,12 +11,12 @@ class BootStrap {
         new User(firstName: "Akeem", lastName: "Davis", email: "adavis20@oswego.edu",
                 imageUrl: null,role: RoleType.INSTRUCTOR,authToken: null).save(flush:true)
         new User(firstName: "Ricky", lastName: "Rojas", email: "rrojas@oswego.edu",
-                imageUrl: null, role: null,authToken: null,course: Course.findAllByName("csc480")).save(flush:true)
+                imageUrl: null, role: null,authToken: null,course: Course.findAllByCrn(12345)).save(flush:true)
         new User(firstName: "Matt", lastName: "Wu", email: "jwu5@oswego.edu",
-                imageUrl: null,role: null,authToken: null,course: Course.findAllByName("csc480")).save(flush:true)
+                imageUrl: null,role: null,authToken: null,course: Course.findByCrn(12345)).save(flush:true)
 
         //Example Course
-        new Course(name: csc480, crn: 12345, users: User.findAllByRole(null), semester: Semester.findBySeasonAndYear(Season.SPRING,2017)).save(flush:true)
+        new Course(name: csc480, crn: 12345, users: User.findAllByRole(null)).save(flush:true)
 
     }
     def destroy = {
