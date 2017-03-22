@@ -11,9 +11,9 @@ class User {
     String imageUrl
 
     static hasOne = [authToken: AuthToken, role: Role]
-    static hasMany = [course: Course]
 
     static mapping = {
+        table "users"
         version false
     }
 
@@ -23,6 +23,5 @@ class User {
         email unique: true
         authToken nullable: true
         imageUrl nullable: true, blank: false
-        role nullable: true
     }
 }
