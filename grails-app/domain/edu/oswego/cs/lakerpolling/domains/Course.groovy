@@ -1,19 +1,19 @@
 package edu.oswego.cs.lakerpolling.domains
 
 
-String name
+class Course {
+    String name
     String crn
 
-    static hasMany = [users: User]
+    static hasMany = [students: User]
     static belongsTo = [instructor: User]
 
     static mapping = {
-        id column: 'crn'
     }
 
     static constraints = {
-        name nullable: true
+        name nullable: false
         crn nullable: false
-        users nullable: true
+        students nullable: true
     }
 }
