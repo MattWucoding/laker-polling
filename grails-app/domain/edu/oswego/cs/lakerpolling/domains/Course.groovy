@@ -4,6 +4,7 @@ package edu.oswego.cs.lakerpolling.domains
 class Course {
     String name
     String crn
+    String description
 
     static hasMany = [students: User]
     static belongsTo = [instructor: User]
