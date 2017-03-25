@@ -15,6 +15,10 @@ class User {
     static mapping = {
         table "users"
         version false
+        firstName column: 'First Name'
+        lastName column: 'Last Name'
+        email column: 'Email'
+        imageUrl column: 'Image'
     }
 
     static constraints = {
